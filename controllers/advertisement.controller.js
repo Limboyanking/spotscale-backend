@@ -3,6 +3,7 @@ Implement the feature to allow the seller to activate/deactivate
 their own advertisements.
 
 Providing field 'enable' for the frontend logic.
+Corresponding field 'canActivate' on frontend.
 */
 
 const mongoose = require('mongoose');
