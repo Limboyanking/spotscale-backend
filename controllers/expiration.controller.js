@@ -1,3 +1,8 @@
+/*
+Design and implement the expiration date setting feature 
+for the seller on the SpotSale site.
+*/
+
 const mongoose = require('mongoose');
 const advertisementModel = require("../models/advertisement.model");
 

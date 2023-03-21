@@ -1,3 +1,11 @@
+/*
+Implement the restrictions for the seller 
+to not be able to delete other sellers' advertisements 
+(restriction based on the User ID token).
+
+isAllow
+*/
+
 let passport = require('passport');
 let AdvertisementModel = require('../models/advertisement.model');
 let UserModel = require('../models/user.model');
