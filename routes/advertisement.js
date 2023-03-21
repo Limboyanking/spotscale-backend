@@ -24,6 +24,7 @@ router.delete('/delete/:id', authController.requireAuth,
 // router.get('/add', authController.requireAuth, advertisementController.displayAddPage);
 router.post('/add', authController.requireAuth, advertisementController.processAdd);
 
-
+// explicitly check ownership 
+router.get('/advertisement/check-ownership/:id',authController.checkOwnership);
 
 module.exports = router;

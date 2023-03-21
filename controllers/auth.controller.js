@@ -39,6 +39,42 @@ exports.requireAuth = function(req, res, next)
 }
 
 
+// Specifically return isOwnership
+exports.checkOwnership = async function (req, res, next) {
+    try {
+      const productId = req.params.id;
+  
+      const product = await AdvertisementModel.findById(productId);
+      
+      let currentUser = await UserModel.findOne({_id: req.payload.id}, 'admin');
+   
+      const isOwner = false;
+
+      if (!product) {
+        return res.status(404).json({
+          success: false,
+          message: 'Product not found',
+        });
+      }
+      
+      // either admin or the owner can modify the product
+      if(currentUser.admin === true || product.owner.toString() === req.payload.id){
+        isOwner = true;
+      }
+  
+      return res.json({ success: true, isOwner });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        success: false,
+        message: 'Internal server error',
+      });
+    }
+  };
+
+
+
+
 // Validates the owner of the item.
 exports.isAllowed = async function (req, res, next){
 
