@@ -1,3 +1,10 @@
+/*
+Implement the feature to allow the seller to activate/deactivate 
+their own advertisements.
+
+Providing field 'enable' for the frontend logic.
+*/
+
 const mongoose = require('mongoose');
 const Advertisement = require('../models/advertisement.model');
 const datetool = require('../tools/date.tool');
