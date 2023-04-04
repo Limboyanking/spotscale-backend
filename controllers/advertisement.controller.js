@@ -4,6 +4,9 @@ their own advertisements.
 
 Providing field 'enable' for the frontend logic.
 Corresponding field 'canActivate' on frontend.
+
+Design and implement the advertisement creation page on the SpotSale site 
+In response to frontend ops.
 */
 
 const mongoose = require('mongoose');
