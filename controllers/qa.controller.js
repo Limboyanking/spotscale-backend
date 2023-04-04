@@ -1,3 +1,7 @@
+/* 
+Message based on Q&A 
+*/
+
 const e = require("connect-flash");
 const advertisementModel = require("../models/advertisement.model");
 
