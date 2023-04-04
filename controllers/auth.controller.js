@@ -4,6 +4,9 @@ to not be able to delete other sellers' advertisements
 (restriction based on the User ID token).
 
 isAllow
+
+Implement the restriction for the seller to 
+not be able to edit other sellers' advertisements
 */
 
 let passport = require('passport');
